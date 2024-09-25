@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tips</title>
+        <base target="_blank">
+        <link rel="icon" type="image/png" href="./images/icons8-favicon-16.png?v=2">
+    </head>
+<body>
+    <h1>Tips HTML</h1>
+    <div>
+        <h2>1.The loading="lazy" attribute</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>You can use the "loading=lazy" attribute so that the
+                image until the user moves to it, this way you will improve the performance of your page.
+            </p>
+            <img src="./images/logoRibera.jpg" loading="lazy" height="200" width="200" alt="Texto Alternativo">
+        </details>
+    </div>
+    <div>
+        <h2>2.Email, call and SMS links</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>Within the attributes of a link we can reference an email,
+                a phone or an SMS depending on what we want.
+            </p>
+            <a href="mailto:{email}?subject={subject}&amp;body={content}">
+                Send us an email
+            </a><br>
+
+            <a href="tel:{phone}">
+                Call us
+            </a><br>
+
+            <a href="sms:{phone}?body={content}">
+                Send us a message
+            </a>
+        </details>
+    </div>
+    <div>
+        <h2>3.Ordered lists and the attribute "start"</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>With the "start" attribute we can start a list from the value we want.</p>
+            <ol start="10">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Python</li>
+            </ol>
+        </details>
+    </div>
+    <div>
+        <h2>4.The "meter" tag</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>You can use the "meter" tag to mark quantities without the need for CSS.</p>
+            <label for="valor1">Bajo</label>
+            <meter id="valor1" min="0" max="100" low="30" high="75" optimum="80" value="25"></meter>
+            <label for="valor2">Medio</label>
+            <meter id="valor2" min="0" max="100" low="30" high="75" optimum="80" value="50"></meter>
+            <label for="valor3">Alto</label>
+            <meter id="valor3" min="0" max="100" low="30" high="75" optimum="80" value="85"></meter>
+        </details>
+    </div>
+    <div>
+        <h2>5.HTML Native Search</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>Who is the most atractive person in the class?</p>
+            <input list="items">
+            <datalist id="items">
+                <option value="Alejandro"></option>
+                <option value="Victor"></option>
+                <option value="Bea"></option>
+                <option value="Javi"></option>
+                <option value="Guti (Elegir este)"></option>
+            </datalist>
+        </details>
+    </div>
+    <div>
+        <h2>6.The forms Fieldset element</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <form>
+                <fieldset>
+                    <legend>Choose your favourite programing language</legend>
+                    <input type="radio" id="javascript" name="lenguaje">
+                    <label for="javascript">JavaScript</label><br>
+                    <input type="radio" id="python" name="lenguaje">
+                    <label for="python">Python</label><br>
+                    <input type="radio" id="java" name="lenguaje">
+                    <label for="java">Java</label><br>
+                </fieldset>
+            </form>
+        </details>
+    </div>
+    <div>
+        <h2>7."Window.opener"</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>With the "target = _blank" attribute we open the link in a new tab.</p>
+            <a href="https://markodenic.com/" target="_blank" rel="noopener">
+                Marko's website
+            </a>
+        </details>
+    </div>
+    <div>
+        <h2>8.The Base Element</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>In the header of this HTML we have used the "base" tag with the "target=_blank" attribute
+                which causes all links to open in a new tab.
+            </p>
+            <div>
+                This link will open a new tag:<br>
+                <a href="https://freecodetools.org/">Free Code Tools</a>
+            </div>
+        </details>
+    </div>
+    <div>
+        <h2>9.Favicon</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>To update the icon of your website you can force search engines to have the new version
+                adding "?v=2" to the name of our icon.
+            </p>
+        </details>
+    </div>
+    <div>
+        <h2>10.The "spellcheck" attribute</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "spellcheck" attribute is used to define when an element should be corrected for errors..</p>
+            <label for="input1">Spellcheck activate</label><br>
+            <input type="text" id="input1" spellcheck="true"><br><br>
+            <label for="input2">Spellcheck disabled</label><br>
+            <input type="text" id="input2" spellcheck="false">
+        </details>
+    </div>
+    <div>
+        <h2>11.Native HTML "sliders"</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p></p>
+            <label for="volumen">Volume:</label><br>
+            <input type="range" id="volumen" name="volumen" min="0" max="10"><br><br>
+            <label for="resultado">Your volume:</label><br>
+            <input type="number" id="resultado" name="resultado">
+            <script>
+                const volume = document.getElementById('volumen');
+                const result = document.getElementById('resultado');
+                result.value = volume.value;
+
+                volume.addEventListener('change', () => {
+                    result.value = volume.value;
+                });
+            </script>
+        </details>
+    </div>
+    <div>
+        <h2>12.HTML Accordion</h2>
+        <div>
+            <details>
+                <summary>
+                    Expand for more information
+                </summary>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita fugit ad quas odit rerum natus
+                    soluta
+                    voluptatibus assumenda cupiditate? Consectetur ex, excepturi debitis explicabo mollitia ratione
+                    aperiam
+                    perspiciatis corporis. Recusandae!
+                </p>
+            </details>
+        </div>
+    </div>
+    <div>
+        <h2>13.The "mark" tag</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "mark" tag is used to <mark>highlight</mark> text.</p>
+        </details>
+    </div>
+    <div>
+        <h2>14.The "download" attribute</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "download" attribute is used to directly download a link without having to navigate to it first.
+            </p>
+            <a href="./images/logoRibera.jpg" download="">Download the image</a>
+        </details>
+    </div>
+    <div>
+        <h2>15.Efficiency tips</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>Using the .webp extension for the format of our images will make them smaller and increase
+                the performance of our website.
+            </p>
+            <picture>
+                <source srcset="./images/logoRibera.webp" type="image/webp">
+                <img src="./images/logoRibera.webp" alt="logo" height="300px" width="300px">
+            </picture>
+        </details>
+    </div>
+    <div>
+        <h2>16.The video "poster" attribute</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "poster" attribute in video tags is used to display an image while the video is playing.
+                downloading or before it starts playing.
+            </p>
+            <pre>                &lt;video poster="path/to/image"&gt;&lt;/video&gt;
+            </pre>
+        </details>
+    </div>
+    <div>
+        <h2>17.The "input" of type "search"</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "search" type input works the same as the "text" type input, except that it contains a button to
+                clean the field.
+            </p>
+            <form>
+                <label for="texto">Input of type "text"</label><br>
+                <input type="text" id="texto" name="texto"><br><br>
+                <label for="busqueda">Input of type "search"</label><br>
+                <input type="search" id="busqueda" name="busqueda">
+            </form>
+        </details>
+    </div>
+    <div>
+        <h2>18.The "pre" tag</h2>
+        <details>
+            <summary>Expand for more information</summary>
+            <p>The "pre" tag is used to present the text exactly as it is written in HTML.</p>
+            <h3>With "pre":</h3>
+            <pre>                .center {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;   
+                } 
+            </pre>
+            <h3>Without "pre"</h3>
+            <p>
+                .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+            </p>
+        </details>
+    </div>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
